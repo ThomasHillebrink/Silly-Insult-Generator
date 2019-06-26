@@ -150,28 +150,28 @@ let Middle = [
 ," went to the Mountain of Madness with"
 ," worked with"
 ]
-let Nouns = [
-    "you" 
-    ,"your beloved auntie" 
-    ,"your country"
-    ,"your cousin's car"
-    ,"your face"
-    ,"your father"
-    ,"your favourite Bond actor"
-    ,"your hat"
-    ,"your house"
-    ,"your hovercraft"
-    ,"your husband"
-    ,"your Kettle"
-    ,"your liver"
-    ,"your math teacher"
-    ,"your mother"
-    ,"your pimply arse"
-    ,"your sense of style"
-    ,"your sister"
-    ,"your sins"
-    ,"your son"
-    ,"your wife"
+let Noun = [
+    " you" 
+    ," your beloved auntie" 
+    ," your country"
+    ," your cousin's car"
+    ," your face"
+    ," your father"
+    ," your favourite Bond actor"
+    ," your hat"
+    ," your house"
+    ," your hovercraft"
+    ," your husband"
+    ," your Kettle"
+    ," your liver"
+    ," your math teacher"
+    ," your mother"
+    ," your pimply arse"
+    ," your sense of style"
+    ," your sister"
+    ," your sins"
+    ," your son"
+    ," your wife"
     ," a bucket of vomit"
     ," a cheap suit"
     ," a cheese shop"
@@ -242,12 +242,14 @@ let Nouns = [
 
 // random insult picker
 let randomStarter = Math.floor(Math.random()*Starter.length);
-
-let randomMiddle = Math.floor(Math.random()*SoftEnding.length);
+let randomSoftEnding = Math.floor(Math.random()*SoftEnding.length);
+let randomMiddle = Math.floor(Math.random()*Middle.length);
+let randomNoun = Math.floor(Math.random()*Noun.length);
 
 // insult level declarations
-let level1Insult = Starter[randomStarter] + (SoftEnding[randomMiddle] + "!");
+let level1Insult = (Starter[randomStarter]) + (SoftEnding[randomSoftEnding] + "!");
+let level2Insult = (Starter[randomStarter]) + (Middle[randomMiddle]) + (Noun[randomNoun] + "!");
 
-console.log(level1Insult);
+console.log(level2Insult);
 
 
