@@ -2,32 +2,36 @@
 box-sizing: border-box;
 }
 .wrapper{ 
+    text-align: center;
 }
 .header{
     font-family: 'Merriweather', serif;
     grid-area: header;
      background-color: #ECECEC;
-    margin: 10px;
+    margin: 0px;
     overflow:hidden;
     box-shadow: 3px 3px 2px 1px rgba(109, 109, 109, 0.2);
     color: black;
 }
 .content{
-    grid-area: main;
-    margin: 10px;
+
+    margin: 0px;
     font-family: 'Amiri', serif;
     background-color: #FBF5F5;
 }
 .insultBox{
-    text-align: center;
+    margin: 20px;
+
 }
 #Insult{
-    text-align: center;
+
+    background-color: rgb(158, 22, 22);
+    margin: 0px;
 }
 footer{
     background-color: #ECECEC;
     font-family: 'Amiri', serif;
     grid-area: footer;
-    text-align: center;
+
     box-shadow: 3px 3px 5px 5px rgba(109, 109, 109, 0.2);
 }
