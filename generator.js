@@ -223,7 +223,7 @@ let Noun = [
     ," the Cozzers"
     ," the Deep Ones"
     ," the Hell's Grannies gang"
-    ," the Meaning of Life [H. P. Lovecraft, Serious Sam]"
+    ," the Meaning of Life"
     ," the Nazis"
     ," the Queen"
     ," the Royal Family"
@@ -249,59 +249,55 @@ let Connector = [
 
 function myFunction(insultlevel) {
     
-let level1Insult = insultPicker(Starter) + insultPicker(SoftEnding) + "!";
-let level2Insult = insultPicker(Starter) + insultPicker(Middle) + insultPicker(Noun) + "!";
-let level3Insult = insultPicker(Starter) + insultPicker(SoftEnding) + " and " + insultPicker(SoftEnding) + "!";
-
-function insultPicker(x) {
-    if (x == Starter) {
+    // sticks the random strings together into a level based insult.
+    let level1Insult = insultPicker(Starter) + insultPicker(SoftEnding) + "!";
+    let level3Insult = insultPicker(Starter) + insultPicker(SoftEnding) + " and " + insultPicker(SoftEnding) + "!";
+    let level2Insult = insultPicker(Starter) + insultPicker(Middle) + insultPicker(Noun) + "!";
+    
+    // Picks a random string from the array.
+    function insultPicker(x) {
+        if (x == Starter) {
         let randomStarter = Math.floor(Math.random()*Starter.length);
         Y = (Starter[randomStarter]);
         return Y;
-    }
-    else if (x == SoftEnding) {
+        }
+        else if (x == SoftEnding) {
         let randomSoftEnding = Math.floor(Math.random()*SoftEnding.length);
         Y = (SoftEnding[randomSoftEnding]);
         return Y;
-    }
-    else if (x == Middle) {
+        }
+        else if (x == Middle) {
         let randomMiddle = Math.floor(Math.random()*Middle.length);
         Y = (Middle[randomMiddle]);
         return Y;
-    }
-    else if (x == Noun) {
+        }
+        else if (x == Noun) {
         let randomNoun = Math.floor(Math.random()*Noun.length);
         Y = (Noun[randomNoun]);
         return Y;
-    }
-    else if (x == Connector) {
+        }
+        else if (x == Connector) {
         let randomConnector = Math.floor(Math.random()*Connector.length);
         Y = (Connector[randomConnector]);
         return Y;
+        }
     }
-}
 
-if (insultlevel == "1") {
+    if (insultlevel == "1") {
     document.getElementById("Insult").innerHTML = level1Insult;
-}
-else if (insultlevel == "2"){
+    }
+    else if (insultlevel == "2"){
     document.getElementById("Insult").innerHTML = level2Insult;
-}
-else if (insultlevel == "3"){
+    }
+    else if (insultlevel == "3"){
     document.getElementById("Insult").innerHTML = level3Insult;
-}
+    }
 
 }
 
-// Picks a random string from the list.
-/* 
-let randomStarter = Math.floor(Math.random()*Starter.length);
-let randomSoftEnding = Math.floor(Math.random()*SoftEnding.length);
-let randomMiddle = Math.floor(Math.random()*Middle.length);
-let randomNoun = Math.floor(Math.random()*Noun.length);
-*/
 
-// sticks the random strings together into a level based insult.
+
+
 
 
 console.log(level3Insult);
