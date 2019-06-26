@@ -1,0 +1,33 @@
+*{
+box-sizing: border-box;
+}
+.wrapper{ 
+}
+.header{
+    font-family: 'Merriweather', serif;
+    grid-area: header;
+     background-color: #ECECEC;
+    margin: 10px;
+    overflow:hidden;
+    box-shadow: 3px 3px 2px 1px rgba(109, 109, 109, 0.2);
+    color: black;
+}
+.content{
+    grid-area: main;
+    margin: 10px;
+    font-family: 'Amiri', serif;
+    background-color: #FBF5F5;
+}
+.insultBox{
+    text-align: center;
+}
+#Insult{
+    text-align: center;
+}
+footer{
+    background-color: #ECECEC;
+    font-family: 'Amiri', serif;
+    grid-area: footer;
+    text-align: center;
+    box-shadow: 3px 3px 5px 5px rgba(109, 109, 109, 0.2);
+}

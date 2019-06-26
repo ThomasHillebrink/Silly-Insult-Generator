@@ -1,27 +1,27 @@
 
 // Insult lists.
 let Starter = [
-"you" 
-,"your beloved auntie" 
-,"your country"
-,"your cousin's car"
-,"your face"
-,"your father"
-,"your favourite Bond actor"
-,"your hat"
-,"your house"
-,"your hovercraft"
-,"your husband"
-,"your Kettle"
-,"your liver"
-,"your math teacher"
-,"your mother"
-,"your pimply arse"
-,"your sense of style"
-,"your sister"
-,"your sins"
-,"your son"
-,"your wife"
+"You" 
+,"Your beloved auntie" 
+,"Your country"
+,"Your cousin's car"
+,"Your face"
+,"Your father"
+,"Your favourite Bond actor"
+,"Your hat"
+,"Your house"
+,"Your hovercraft"
+,"Your husband"
+,"Your Kettle"
+,"Your liver"
+,"Your math teacher"
+,"Your mother"
+,"Your pimply arse"
+,"Your sense of style"
+,"Your wife"
+,"Your sister"
+,"Your sins"
+,"Your son"
 ] 
 let SoftEnding = [
     " [is/are] afraid of my minigun"
@@ -285,10 +285,10 @@ if (insultlevel == "1") {
     document.getElementById("Insult").innerHTML = level1Insult;
 }
 else if (insultlevel == "2"){
-    document.getElementById("Insult2").innerHTML = level2Insult;
+    document.getElementById("Insult").innerHTML = level2Insult;
 }
 else if (insultlevel == "3"){
-    document.getElementById("Insult3").innerHTML = level3Insult;
+    document.getElementById("Insult").innerHTML = level3Insult;
 }
 
 }

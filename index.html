@@ -5,18 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Silly Insult Generator</title>
+    <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="generator.js"></script>
 
 </head>
 <body>
-
-
-<p id="Insult"></p> 
-<button type="button" onclick="myFunction(1)">Insult me!</button>
-<p id="Insult2"></p> 
-<button type="button" onclick="myFunction(2)">Insult me!</button>
-<p id="Insult3"></p> 
-<button type="button" onclick="myFunction(3)">Insult me!</button>
-
+    <div class="wrapper">
+            <header class="header">
+            <h1>Random silly insult generator</h1>
+        </header>
+            
+        <div class="content">
+            <div>
+                <p id="Insult">Your insult goes here</p>
+            </div>
+            <div>
+            <button type="button" onclick="myFunction(1)">Insult me a little</button>
+            <button type="button" onclick="myFunction(2)">Insult me more</button>
+            <button type="button" onclick="myFunction(3)">Insult me a lot!</button>
+            </div>
+        </div>
+        <footer>
+                <p> Coded by: Thomas Hillebrink</p>
+        </footer>
+    </div>
 </body>
+
 </html>
