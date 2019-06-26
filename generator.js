@@ -1,5 +1,5 @@
 
-// Insult lists
+// Insult lists.
 let Starter = [
 "you" 
 ,"your beloved auntie" 
@@ -240,15 +240,15 @@ let Noun = [
 
 ]
 
-// random insult picker
+// Picks a random string from the list.
 let randomStarter = Math.floor(Math.random()*Starter.length);
 let randomSoftEnding = Math.floor(Math.random()*SoftEnding.length);
 let randomMiddle = Math.floor(Math.random()*Middle.length);
 let randomNoun = Math.floor(Math.random()*Noun.length);
 
-// insult level declarations
-let level1Insult = (Starter[randomStarter]) + (SoftEnding[randomSoftEnding] + "!");
-let level2Insult = (Starter[randomStarter]) + (Middle[randomMiddle]) + (Noun[randomNoun] + "!");
+// sticks the random strings together into a level based insult.
+let level1Insult = (Starter[randomStarter]) + SoftEnding[randomSoftEnding] + "!";
+let level2Insult = (Starter[randomStarter]) + Middle[randomMiddle] + Noun[randomNoun] + "!";
 
 console.log(level2Insult);
 
