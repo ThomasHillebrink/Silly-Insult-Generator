@@ -1,37 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Amiri|Merriweather&display=swap');
 *{
 box-sizing: border-box;
 }
+p{
+    margin: 0;
+}
+body{
+    background-color: #50bbfd81 ;
+    margin:20px 0;
+    font-family: 'Merriweather', serif;
+}
 .wrapper{ 
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 10px;
     text-align: center;
 }
 .header{
     font-family: 'Merriweather', serif;
-    grid-area: header;
-     background-color: #ECECEC;
+    background-color: #ECECEC;
     margin: 0px;
     overflow:hidden;
-    box-shadow: 3px 3px 2px 1px rgba(109, 109, 109, 0.2);
-    color: black;
 }
 .content{
-
-    margin: 0px;
+    padding: 20px;
     font-family: 'Amiri', serif;
-    background-color: #FBF5F5;
+    background-color: rgb(252, 238, 119);
 }
 .insultBox{
-    margin: 20px;
+    padding: 10px;
+    border-radius: 25px;
+    margin-right: 20%;
+    margin-left: 20%;
+    height: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
 
 }
 #Insult{
-
-    background-color: rgb(158, 22, 22);
-    margin: 0px;
+    margin: 0;
+}
+.buttons{
+    margin: 20px 20px 0px 20px;
 }
 footer{
     background-color: #ECECEC;
     font-family: 'Amiri', serif;
-    grid-area: footer;
-
-    box-shadow: 3px 3px 5px 5px rgba(109, 109, 109, 0.2);
+    margin: 0;
 }
