@@ -247,8 +247,12 @@ let Connector = [
     ," since "
 ]
 
-function myFunction() {
+function myFunction(insultlevel) {
     
+let level1Insult = insultPicker(Starter) + insultPicker(SoftEnding) + "!";
+let level2Insult = insultPicker(Starter) + insultPicker(Middle) + insultPicker(Noun) + "!";
+let level3Insult = insultPicker(Starter) + insultPicker(SoftEnding) + " and " + insultPicker(SoftEnding) + "!";
+
 function insultPicker(x) {
     if (x == Starter) {
         let randomStarter = Math.floor(Math.random()*Starter.length);
@@ -276,11 +280,17 @@ function insultPicker(x) {
         return Y;
     }
 }
-let level1Insult = insultPicker(Starter) + insultPicker(SoftEnding) + "!";
-let level2Insult = insultPicker(Starter) + insultPicker(Middle) + insultPicker(Noun) + "!";
-let level3Insult = insultPicker(Starter) + insultPicker(SoftEnding) + insultPicker(Connector) + insultPicker(Starter) + insultPicker(SoftEnding) + "!";
 
-document.getElementById("Insult").innerHTML = level3Insult;
+if (insultlevel == "1") {
+    document.getElementById("Insult").innerHTML = level1Insult;
+}
+else if (insultlevel == "2"){
+    document.getElementById("Insult2").innerHTML = level2Insult;
+}
+else if (insultlevel == "3"){
+    document.getElementById("Insult3").innerHTML = level3Insult;
+}
+
 }
 
 // Picks a random string from the list.
