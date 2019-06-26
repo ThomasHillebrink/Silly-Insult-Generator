@@ -240,6 +240,30 @@ let Noun = [
 
 ]
 
+
+function insultPicker(x) {
+    if (x == Starter) {
+        let randomStarter = Math.floor(Math.random()*Starter.length);
+        Y = (Starter[randomStarter]);
+        return Y;
+    }
+    else if (x == SoftEnding) {
+        let randomSoftEnding = Math.floor(Math.random()*SoftEnding.length);
+        Y = (SoftEnding[randomSoftEnding]);
+        return Y;
+    }
+    else if (x == Middle) {
+        let randomMiddle = Math.floor(Math.random()*Middle.length);
+        Y = (Middle[randomMiddle]);
+        return Y;
+    }
+    else if (x == Noun) {
+        let randomNoun = Math.floor(Math.random()*Noun.length);
+        Y = (Noun[randomNoun]);
+        return Y;
+    }
+}
+
 // Picks a random string from the list.
 let randomStarter = Math.floor(Math.random()*Starter.length);
 let randomSoftEnding = Math.floor(Math.random()*SoftEnding.length);
@@ -247,9 +271,12 @@ let randomMiddle = Math.floor(Math.random()*Middle.length);
 let randomNoun = Math.floor(Math.random()*Noun.length);
 
 // sticks the random strings together into a level based insult.
-let level1Insult = (Starter[randomStarter]) + SoftEnding[randomSoftEnding] + "!";
-let level2Insult = (Starter[randomStarter]) + Middle[randomMiddle] + Noun[randomNoun] + "!";
+let level1Insult = insultPicker(Starter) + insultPicker(SoftEnding) + "!";
+let level2Insult = insultPicker(Starter) + insultPicker(Middle) + insultPicker(Noun) + "!";
+let level3Insult = insultPicker(Starter) + insultPicker(SoftEnding) + " and " + insultPicker(Starter) + insultPicker(SoftEnding) + "!";
 
+console.log(level1Insult);
 console.log(level2Insult);
+console.log(level3Insult);
 
 
