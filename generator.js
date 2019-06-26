@@ -111,7 +111,6 @@ let SoftEnding = [
     ," will always be alone"
     ," will be chopped to bits"
     ," will be damned for eternity"
-    ," will disembowel"
     ," will murder for a seat reservation"
     ," will reincarnate as a pigeon"
     ," will soon kick the bucket"
@@ -149,6 +148,7 @@ let Middle = [
 ," wanted to be"
 ," went to the Mountain of Madness with"
 ," worked with"
+," will disembowel"
 ]
 let Noun = [
     " you" 
@@ -239,8 +239,16 @@ let Noun = [
     ," vodka"
 
 ]
+let Connector = [
+    " and "
+    ," because "
+    ," despite of "
+    ," while "
+    ," since "
+]
 
-
+function myFunction() {
+    
 function insultPicker(x) {
     if (x == Starter) {
         let randomStarter = Math.floor(Math.random()*Starter.length);
@@ -262,21 +270,32 @@ function insultPicker(x) {
         Y = (Noun[randomNoun]);
         return Y;
     }
+    else if (x == Connector) {
+        let randomConnector = Math.floor(Math.random()*Connector.length);
+        Y = (Connector[randomConnector]);
+        return Y;
+    }
+}
+let level1Insult = insultPicker(Starter) + insultPicker(SoftEnding) + "!";
+let level2Insult = insultPicker(Starter) + insultPicker(Middle) + insultPicker(Noun) + "!";
+let level3Insult = insultPicker(Starter) + insultPicker(SoftEnding) + insultPicker(Connector) + insultPicker(Starter) + insultPicker(SoftEnding) + "!";
+
+document.getElementById("Insult").innerHTML = level3Insult;
 }
 
 // Picks a random string from the list.
+/* 
 let randomStarter = Math.floor(Math.random()*Starter.length);
 let randomSoftEnding = Math.floor(Math.random()*SoftEnding.length);
 let randomMiddle = Math.floor(Math.random()*Middle.length);
 let randomNoun = Math.floor(Math.random()*Noun.length);
+*/
 
 // sticks the random strings together into a level based insult.
-let level1Insult = insultPicker(Starter) + insultPicker(SoftEnding) + "!";
-let level2Insult = insultPicker(Starter) + insultPicker(Middle) + insultPicker(Noun) + "!";
-let level3Insult = insultPicker(Starter) + insultPicker(SoftEnding) + " and " + insultPicker(Starter) + insultPicker(SoftEnding) + "!";
 
-console.log(level1Insult);
-console.log(level2Insult);
+
 console.log(level3Insult);
 
+
+    
 
