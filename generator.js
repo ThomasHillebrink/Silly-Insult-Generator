@@ -1,5 +1,5 @@
 
-// Declare arrays with strings of text
+// Declare the arrays with strings of insult text to be used
 let Starter = [
 "you" 
 ,"your beloved auntie" 
@@ -301,14 +301,14 @@ let Ending = [
     ,", young man!"
 ]
 
-function myFunction(insultlevel) {
+function myFunction(insultlevel) {// This is the function called in the HTML file
     
-    // sticks the random strings together into a level based insult. The generation function is used rather than the generated variable to ensure a new string is picked each time.
+    // sticks the random strings together into a level based insult. The generation function is used rather than the generated variable to ensure a new string is picked each time. It needs to be on top of the function as Javascript wants values to be declared first before you do anything else.
     let level1Insult = insultPicker(Starter) + insultPicker(SoftEnding) + "!";
     let level2Insult = insultPicker(Starter) + insultPicker(SoftEnding) + " and " + insultPicker(SoftEnding) + "!";
     let level3Insult = insultPicker(Starter) + insultPicker(Middle) + insultPicker(Noun) + " and " + insultPicker(Starter) + insultPicker(SoftEnding) + insultPicker(Ending) + "!";
     
-    // Picks a random string from the array based in which list is called.
+    // Picks a random string from the array based in which array list is called.
     function insultPicker(/*x*/) {
         if (/*x == */Starter) {
         let randomStarter = Math.floor(Math.random()*Starter.length);// Math.floor returns am interger rounded down. Math.random picks a random decimal between 0 and 1. That is multiplied by the total length of the array to return a random index number from the array. The number is saved in a variable
@@ -341,9 +341,9 @@ function myFunction(insultlevel) {
         return Y;
         }
     }
-    // replace contents of html paragraph with the id of "insult" with value of resulting variable
+    // replace the contents of the element in attached HTML file that have the id of "insult" with value of resulting variable.
     if (insultlevel == "1") {
-    document.getElementById("Insult"/*id within HTML element*/).innerHTML = level1Insult;
+    document.getElementById("Insult"/*id within HTML element*/).innerHTML = /**/ level1Insult; /*// <- So the value of this variable that is created at the top of this function.*/
     }
     else if (insultlevel == "2"){
     document.getElementById("Insult").innerHTML = level2Insult;
