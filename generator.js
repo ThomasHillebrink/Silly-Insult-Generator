@@ -1,27 +1,27 @@
 
 // Insult lists.
 let Starter = [
-"You" 
-,"Your beloved auntie" 
-,"Your country"
-,"Your cousin's car"
-,"Your face"
-,"Your father"
-,"Your favourite Bond actor"
-,"Your hat"
-,"Your house"
-,"Your hovercraft"
-,"Your husband"
-,"Your Kettle"
-,"Your liver"
-,"Your math teacher"
-,"Your mother"
-,"Your pimply arse"
-,"Your sense of style"
-,"Your wife"
-,"Your sister"
-,"Your sins"
-,"Your son"
+"you" 
+,"your beloved auntie" 
+,"your country"
+,"your cousin's car"
+,"your face"
+,"your father"
+,"your favourite Bond actor"
+,"your hat"
+,"your house"
+,"your hovercraft"
+,"your husband"
+,"your Kettle"
+,"your liver"
+,"your math teacher"
+,"your mother"
+,"your son"
+,"your pimply arse"
+,"your sense of style"
+,"your wife"
+,"your sister"
+,"your sins"
 ] 
 let SoftEnding = [
     " [is/are] afraid of my minigun"
@@ -245,14 +245,68 @@ let Connector = [
     ," despite of "
     ," while "
     ," since "
+] 
+let Ending = [
+    ,", mate/honey!"
+    ,", mister/ma'am!"
+    ,", sir/lady!"
+    ,", and everybody knows that!"
+    ,", and I damn you!"
+    ,", and I don't love you!"
+    ,", and I have proof!"
+    ,", and I'm Serious!"
+    ,", and it's scientifically proven!"
+    ,", and now let me finish the rites!"
+    ,", and piss off!"
+    ,", and stop being a berk!"
+    ,", and that's a load of bollocks!"
+    ,", and that's racist!"
+    ,", and the Dead One still dreams in R'lyeh!"
+    ,", and you can't deny it!"
+    ,", and you know it's true!"
+    ,", because I don't exist!"
+    ,", because you are a spoiled brat!"
+    ,", cockwomble!"
+    ,", I bet!"
+    ,", innit?!"
+    ,", like a minging peasant!"
+    ,", now put a sock in it!"
+    ,", nudge nudge!"
+    ,", oh God, who writes this stuff?!"
+    ,", or is it about the way I talk?!"
+    ,", pardon my French!"
+    ,", says the fortune cookie!"
+    ,", so go back to your seat!"
+    ,", so, you know, well, innit, eh?!"
+    ,", товарищ! (tovarishch!)[comrade!]"
+    ,", which is an ancient Chinese secret"
+    ,", which makes me stiff!"
+    ,", which might cause death!"
+    ,", which seemed intuitive in design docs!"
+    ,", which will make you die or go insane!"
+    ,", you [son/daughter] of a washerwoman!"
+    ,", you cheeky bastard!"
+    ,", you cheeky bint!"
+    ,", you commoner!"
+    ,", you cross-eyed, inbred muckspout!"
+    ,", you dickbag!"
+    ,", you ginger! [Grisha]"
+    ,", you inbred twit!"
+    ,", you lying git!"
+    ,", you numpty!"
+    ,", you pillock!"
+    ,", you pitiful mortal!"
+    ,", you posh fopdoodle!"
+    ,", you tottering fool-born hedge-pig!"
+    ,", young man!"
 ]
 
 function myFunction(insultlevel) {
     
     // sticks the random strings together into a level based insult.
     let level1Insult = insultPicker(Starter) + insultPicker(SoftEnding) + "!";
-    let level3Insult = insultPicker(Starter) + insultPicker(SoftEnding) + " and " + insultPicker(SoftEnding) + "!";
-    let level2Insult = insultPicker(Starter) + insultPicker(Middle) + insultPicker(Noun) + "!";
+    let level2Insult = insultPicker(Starter) + insultPicker(SoftEnding) + " and " + insultPicker(SoftEnding) + "!";
+    let level3Insult = insultPicker(Starter) + insultPicker(Middle) + insultPicker(Noun) + " and " + insultPicker(Starter) + insultPicker(SoftEnding) + insultPicker(Ending) + "!";
     
     // Picks a random string from the array.
     function insultPicker(x) {
@@ -279,6 +333,11 @@ function myFunction(insultlevel) {
         else if (x == Connector) {
         let randomConnector = Math.floor(Math.random()*Connector.length);
         Y = (Connector[randomConnector]);
+        return Y;
+        }
+        else if (x == Ending) {
+        let randomEnding = Math.floor(Math.random()*Ending.length);
+        Y = (Ending[randomEnding]);
         return Y;
         }
     }
