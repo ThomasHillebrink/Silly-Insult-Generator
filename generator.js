@@ -308,7 +308,7 @@ function myFunction(insultlevel) {
     let level2Insult = insultPicker(Starter) + insultPicker(SoftEnding) + " and " + insultPicker(SoftEnding) + "!";
     let level3Insult = insultPicker(Starter) + insultPicker(Middle) + insultPicker(Noun) + " and " + insultPicker(Starter) + insultPicker(SoftEnding) + insultPicker(Ending) + "!";
     
-    // Picks a random string from the array.
+    // Picks a random string from the array based in which list is called.
     function insultPicker(x) {
         if (x == Starter) {
         let randomStarter = Math.floor(Math.random()*Starter.length);
@@ -341,7 +341,7 @@ function myFunction(insultlevel) {
         return Y;
         }
     }
-
+    // replace contents of html paragraph with the id of "insult" with value of resulting variable
     if (insultlevel == "1") {
     document.getElementById("Insult").innerHTML = level1Insult;
     }
