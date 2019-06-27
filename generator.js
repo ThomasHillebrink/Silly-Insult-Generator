@@ -309,33 +309,33 @@ function myFunction(insultlevel) {
     let level3Insult = insultPicker(Starter) + insultPicker(Middle) + insultPicker(Noun) + " and " + insultPicker(Starter) + insultPicker(SoftEnding) + insultPicker(Ending) + "!";
     
     // Picks a random string from the array based in which list is called.
-    function insultPicker(x) {
-        if (x == Starter) {
+    function insultPicker() {
+        if (Starter) {
         let randomStarter = Math.floor(Math.random()*Starter.length);
         Y = (Starter[randomStarter]);
         return Y;
         }
-        else if (x == SoftEnding) {
+        else if (SoftEnding) {
         let randomSoftEnding = Math.floor(Math.random()*SoftEnding.length);
         Y = (SoftEnding[randomSoftEnding]);
         return Y;
         }
-        else if (x == Middle) {
+        else if (Middle) {
         let randomMiddle = Math.floor(Math.random()*Middle.length);
         Y = (Middle[randomMiddle]);
         return Y;
         }
-        else if (x == Noun) {
+        else if (Noun) {
         let randomNoun = Math.floor(Math.random()*Noun.length);
         Y = (Noun[randomNoun]);
         return Y;
         }
-        else if (x == Connector) {
+        else if (Connector) {
         let randomConnector = Math.floor(Math.random()*Connector.length);
         Y = (Connector[randomConnector]);
         return Y;
         }
-        else if (x == Ending) {
+        else if (Ending) {
         let randomEnding = Math.floor(Math.random()*Ending.length);
         Y = (Ending[randomEnding]);
         return Y;
