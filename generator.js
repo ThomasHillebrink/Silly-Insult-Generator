@@ -290,7 +290,7 @@ let Ending = [
     ,", you commoner!"
     ,", you cross-eyed, inbred muckspout!"
     ,", you dickbag!"
-    ,", you ginger! [Grisha]"
+    ,", you ginger!"
     ,", you inbred twit!"
     ,", you lying git!"
     ,", you numpty!"

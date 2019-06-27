@@ -99,3 +99,12 @@ footer{
     font-family: 'Amiri', serif;
     margin: 0;
 }
+
+@media  only screen and (max-width: 700px) {
+.insultBox{
+    padding: 10px;
+    border-radius: 25px;
+    margin-right: 0%;
+    margin-left: 0%;
+    height: 7em;
+}
