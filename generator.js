@@ -1,5 +1,5 @@
 
-// Insult lists.
+// Declare arrays with strings of text
 let Starter = [
 "you" 
 ,"your beloved auntie" 
@@ -180,7 +180,7 @@ let Noun = [
     ," a cold sausage without mustard"
     ," a cream-faced loon"
     ," a dead parrot"
-    ," a demon's asshole * Lo Wang"
+    ," a demon's asshole"
     ," a duck hunter"
     ," a frightened schoolboy"
     ," a grunting sow"
@@ -303,7 +303,7 @@ let Ending = [
 
 function myFunction(insultlevel) {
     
-    // sticks the random strings together into a level based insult.
+    // sticks the random strings together into a level based insult. The generation function is used rather than the generated variable to ensure a new string is picked each time.
     let level1Insult = insultPicker(Starter) + insultPicker(SoftEnding) + "!";
     let level2Insult = insultPicker(Starter) + insultPicker(SoftEnding) + " and " + insultPicker(SoftEnding) + "!";
     let level3Insult = insultPicker(Starter) + insultPicker(Middle) + insultPicker(Noun) + " and " + insultPicker(Starter) + insultPicker(SoftEnding) + insultPicker(Ending) + "!";
@@ -311,9 +311,9 @@ function myFunction(insultlevel) {
     // Picks a random string from the array based in which list is called.
     function insultPicker(x) {
         if (x == Starter) {
-        let randomStarter = Math.floor(Math.random()*Starter.length);
-        Y = (Starter[randomStarter]);
-        return Y;
+        let randomStarter = Math.floor(Math.random()*Starter.length);// Math.floor returns am interger rounded down. Math.random picks a random decimal between 0 and 1. That is multiplied by the total length of the array to return a random index number from the array. The number is saved in a variable
+        Y = (Starter[randomStarter]);//This grabs the word on the index location picked previously and stores the word.
+        return Y;// The word is then returned 
         }
         else if (x == SoftEnding) {
         let randomSoftEnding = Math.floor(Math.random()*SoftEnding.length);
